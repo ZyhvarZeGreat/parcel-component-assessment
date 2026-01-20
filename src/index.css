@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+@theme {
+    --font-display: "Host Grotesk", sans-serif;
+    --font-body: "Figtree", sans-serif;
+}
+
+:root {
+    font-family: var(--font-body);
+    line-height: 1.5;
+    font-weight: 400;
+    color: #09090b;
+    background-color: #f8f8f8;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+thead,
+td,
+tr,
+a {
+    font-family: var(--font-body);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa;
+}
