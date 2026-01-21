@@ -1,4 +1,4 @@
-import { Pencil, Trash, MoreHorizontal, Box } from 'lucide-react';
+import { Pencil, Trash, Box } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Parcel } from '../../types/parcel';
 

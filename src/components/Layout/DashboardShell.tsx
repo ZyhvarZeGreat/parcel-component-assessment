@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Package, Settings, LogOut, Bell } from 'lucide-react';
+import { LayoutDashboard, Package, Settings, Bell } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface DashboardShellProps {
