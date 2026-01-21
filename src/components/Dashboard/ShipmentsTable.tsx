@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pencil, Trash, MoreHorizontal, ChevronLeft, ChevronRight, Filter, ArrowUpDown } from 'lucide-react';
+import { Pencil, Trash, MoreHorizontal, ChevronLeft, ChevronRight, Filter, ArrowUpDown, ChevronDown } from 'lucide-react';
 import { Dropdown } from '../ui/Dropdown';
 import type { Parcel } from '../../types/parcel';
 
@@ -42,7 +42,25 @@ export const ShipmentsTable = ({ parcels, onEdit, onDelete }: ShipmentsTableProp
 
                     <div className="flex items-center gap-2">
                         {/* Tabs */}
-                        <div className="flex items-center font-body bg-gray-100 rounded-xl p-1">
+                        {/* Mobile Tabs Dropdown */}
+                        <div className="md:hidden">
+                            <Dropdown
+                                className="w-full"
+                                trigger={
+                                    <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-xl text-sm font-medium text-gray-900">
+                                        <span>{activeTab}</span>
+                                        <ChevronDown className="w-4 h-4" />
+                                    </button>
+                                }
+                                items={tabs.map(tab => ({
+                                    label: tab,
+                                    onClick: () => setActiveTab(tab)
+                                }))}
+                            />
+                        </div>
+
+                        {/* Desktop Tabs */}
+                        <div className="hidden md:flex items-center font-body bg-gray-100 rounded-xl p-1">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab}
