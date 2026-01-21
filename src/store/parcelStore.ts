@@ -9,6 +9,8 @@ export interface ParcelStore {
     updateParcel: (id: string, updatedParcel: Partial<Parcel>) => void;
     deleteParcel: (id: string) => void;
     getMetrics: () => { totalCount: number; totalWeight: number; totalQuantity: number };
+    searchQuery: string;
+    setSearchQuery: (query: string) => void;
 }
 
 export const useParcelStore = (): ParcelStore => {
@@ -16,6 +18,7 @@ export const useParcelStore = (): ParcelStore => {
         const stored = localStorage.getItem(STORAGE_KEY);
         return stored ? JSON.parse(stored) : [];
     });
+    const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(parcels));
@@ -66,5 +69,5 @@ export const useParcelStore = (): ParcelStore => {
         };
     };
 
-    return { parcels, addParcel, updateParcel, deleteParcel, getMetrics };
+    return { parcels, addParcel, updateParcel, deleteParcel, getMetrics, searchQuery, setSearchQuery };
 };

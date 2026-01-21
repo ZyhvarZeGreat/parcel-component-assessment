@@ -36,12 +36,12 @@ export const VehiclesCard = () => {
 
                 {/* Truck Image Placeholder */}
                 <div className="relative">
-                    <div className="w-32 h-20 bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
+                    <div className="w-32 h-32 bg-gray-100 rounded-xl flex items-center justify-center overflow-hidden">
                         <img src="/src/assets/truck.png" alt="Delivery Truck" className="w-full h-full object-cover transform scale-125" />
                     </div>
-                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full flex items-center gap-1">
+                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 py-1   bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full flex items-center gap-3">
                         <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
-                        On-Route
+                        En-Route
                     </span>
                 </div>
             </div>
